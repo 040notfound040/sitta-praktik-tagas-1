@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informasi Stok Bahan Ajar - SITTA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stok">
+<header id="navbar" class="navbar"></header>
+<main>
+  <section class="card">
+    <div class="toolbar">
+      <div><h1 style="margin:0">Informasi Bahan Ajar</h1><p class="sub">Peragaan data bahan ajar</p></div>
+      <div><input type="search" id="cariStok" placeholder="Cari nama/kode..." style="padding:.6rem;border:2px solid #c5cedb;border-radius:8px">
+      <button class="btn" data-open="modalTambah">+ Tambah Stok</button></div>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <caption class="hidden">Daftar stok bahan ajar</caption>
+        <thead><tr><th>Cover</th><th>Kode Lokasi</th><th>Kode Barang</th><th>Nama Barang</th><th>Jenis</th><th>Edisi</th><th>Stok</th></tr></thead>
+        <tbody id="tbodyStok"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<div class="modal" id="modalTambah" role="dialog" aria-modal="true" aria-labelledby="tTambah">
+  <div class="modal-box">
+    <h2 id="tTambah">Tambah Stok Baru</h2>
+    <form id="formTambah" novalidate>
+      <div class="field"><label for="tKodeLok">Kode Lokasi</label><input id="tKodeLok"><span class="err"></span></div>
+      <div class="field"><label for="tKodeBrg">Kode Barang</label><input id="tKodeBrg"><span class="err"></span></div>
+      <div class="field"><label for="tNama">Nama Barang</label><input id="tNama"><span class="err"></span></div>
+      <div class="field"><label for="tJenis">Jenis Barang</label><select id="tJenis"><option>BMP</option><option>NonBMP</option></select></div>
+      <div class="field"><label for="tEdisi">Edisi</label><input type="number" id="tEdisi" min="1"><span class="err"></span></div>
+      <div class="field"><label for="tStok">Stok</label><input type="number" id="tStok" min="0"><span class="err"></span></div>
+      <div class="modal-actions"><button type="button" class="btn abu" data-close>Batal</button><button class="btn" type="submit">Simpan</button></div>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

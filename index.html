@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - SITTA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page" data-page="login">
+<main class="login-card">
+  <p class="brand">SITTA &middot; Universitas Terbuka</p>
+  <h1>Selamat Datang</h1>
+  <form id="formLogin" novalidate>
+    <div class="field"><label for="email">Email</label>
+      <input type="email" id="email" placeholder="contoh: rina@ut.ac.id" autocomplete="username">
+      <span class="err" id="errEmail"></span></div>
+    <div class="field"><label for="password">Password</label>
+      <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+      <span class="err" id="errPass"></span></div>
+    <div class="row-between"><span></span><button type="button" class="link-btn" data-open="modalLupa">Lupa password?</button></div>
+    <button type="submit" class="btn block">Login</button>
+  </form>
+  <p class="center">Belum punya akun? <button type="button" class="link-btn" data-open="modalDaftar">Daftar</button></p>
+</main>
+
+<div class="modal" id="modalLupa" role="dialog" aria-modal="true" aria-labelledby="tLupa">
+  <div class="modal-box">
+    <h2 id="tLupa">Lupa Password</h2>
+    <p class="sub">Masukkan email terdaftar untuk menerima tautan reset password.</p>
+    <form id="formLupa" novalidate>
+      <div class="field"><label for="emailLupa">Email</label><input type="email" id="emailLupa"><span class="err"></span></div>
+      <div class="modal-actions"><button type="button" class="btn abu" data-close>Batal</button><button class="btn" type="submit">Kirim</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="modalDaftar" role="dialog" aria-modal="true" aria-labelledby="tDaftar">
+  <div class="modal-box">
+    <h2 id="tDaftar">Daftar Akun</h2>
+    <form id="formDaftar" novalidate>
+      <div class="field"><label for="dNama">Nama lengkap</label><input id="dNama"><span class="err"></span></div>
+      <div class="field"><label for="dEmail">Email</label><input type="email" id="dEmail"><span class="err"></span></div>
+      <div class="field"><label for="dRole">Role</label>
+        <select id="dRole"><option>UPBJJ-UT</option><option>Puslaba</option><option>Fakultas</option></select></div>
+      <div class="field"><label for="dPass">Password (min. 6 karakter)</label><input type="password" id="dPass"><span class="err"></span></div>
+      <div class="field"><label for="dPass2">Ulangi password</label><input type="password" id="dPass2"><span class="err"></span></div>
+      <div class="modal-actions"><button type="button" class="btn abu" data-close>Batal</button><button class="btn" type="submit">Daftar</button></div>
+    </form>
+  </div>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - SITTA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+<header id="navbar" class="navbar"></header>
+<main>
+  <section class="card">
+    <h1 class="greeting" id="greeting">Selamat datang</h1>
+    <p class="sub" id="userInfo"></p>
+    <p class="sub" id="jam"></p>
+  </section>
+  <section aria-label="Ringkasan" class="stats" id="stats"></section>
+  <section class="card" style="margin-top:1.2rem">
+    <h2>Dashboard Aplikasi SITTA</h2>
+    <p>Gunakan menu di atas untuk melihat informasi stok bahan ajar dan melacak pengiriman Delivery Order.</p>
+  </section>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
